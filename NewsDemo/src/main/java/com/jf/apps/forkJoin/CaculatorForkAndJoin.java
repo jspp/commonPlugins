@@ -11,10 +11,6 @@ import java.util.concurrent.RecursiveTask;
  */
 public class CaculatorForkAndJoin extends RecursiveTask<Long> {
 
-/**
- * 创建serialVersionUID
- */
-private static final long serialVersionUID=1L;
 
 private long start;
 private long end;
