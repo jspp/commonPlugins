@@ -12,8 +12,8 @@ import java.util.function.*;
  */
 public class CommInterfaceDemo {
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         /**
          * Function<T, R> -T作为输入，返回的R作为输出
          */
