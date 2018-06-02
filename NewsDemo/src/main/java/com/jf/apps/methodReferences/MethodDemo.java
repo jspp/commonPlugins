@@ -1,4 +1,4 @@
-package com.jf.apps.mrthodReferences;
+package com.jf.apps.methodReferences;
 
 import java.util.Arrays;
 import java.util.List;
