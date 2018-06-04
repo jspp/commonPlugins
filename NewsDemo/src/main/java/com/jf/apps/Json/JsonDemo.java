@@ -37,6 +37,8 @@ public class JsonDemo {
         JSONObject data = jsonObject.getJSONObject("data");
         JSONArray array = data.getJSONArray("dataList");
         System.out.println(array.size());
+
+
         /**
          * Json 转Java对象
          */
@@ -46,10 +48,8 @@ public class JsonDemo {
                 .forEach((x)->{
                         JSONObject map = JSONObject.fromObject(x);
                         System.out.println(map.getString("gameName"));
-                        //log.info(x.toString());
+                        //log.info(x.toString());  1
                        });
-
-
 		System.out.println("git");
 
     }
