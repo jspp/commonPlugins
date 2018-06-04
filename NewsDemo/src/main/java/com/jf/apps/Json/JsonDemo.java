@@ -51,7 +51,6 @@ public class JsonDemo {
 
 
 		System.out.println("git");
-		System.out.println("git");
 
     }
 
