@@ -46,10 +46,11 @@ public class JsonDemo {
                 .forEach((x)->{
                         JSONObject map = JSONObject.fromObject(x);
                         System.out.println(map.getString("gameName"));
-                        log.info(x.toString());
+                        //log.info(x.toString());
                        });
 
 
+		System.out.println("git");
 
     }
 
