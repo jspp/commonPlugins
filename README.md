@@ -18,6 +18,7 @@ Java8 的一些新特性介绍和示例。
 - json-lib
 - gson
 - lambok 插件
+- jsoup HTML chang
 
 说明：
 
