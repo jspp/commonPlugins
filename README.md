@@ -15,10 +15,11 @@ Java8 的一些新特性介绍和示例。
 其他:
 
 - ForkJoin 
-- json-lib
-- gson
-- lambok 插件
-- jsoup HTML chang
+- json-lib : Json 解析 序列化 反序列化
+- gson : Json 解析 序列化 反序列化
+- lambok : 简化插件
+- jsoup : HTML解析 常用于爬虫或者数据抓取
+
 
 说明：
 
