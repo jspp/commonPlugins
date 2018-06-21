@@ -16,4 +16,13 @@ public class Userbean {
     private  String age;
 
     private  String sex;
+
+    public Userbean(String name, String sex) {
+        this.name = name;
+        this.sex = sex;
+    }
+
+    public Userbean() {}
+
+
 }
