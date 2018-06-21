@@ -19,6 +19,7 @@ Java8 的一些新特性介绍和示例。
 - gson : Json 解析 序列化 反序列化
 - lambok : 简化插件
 - jsoup : HTML解析 常用于爬虫或者数据抓取
+- WebFlux SpringBoot Rest
 
 
 说明：
