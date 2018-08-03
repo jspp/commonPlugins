@@ -76,6 +76,12 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>com.juefeng</groupId>
+      <artifactId>jf_game_common</artifactId>
+      <version>1.6.30-SNAPSHOT</version>
+    </dependency>
+
   </dependencies>
 
   <build>
