@@ -24,17 +24,11 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
 
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.16.20</version>
+      <version>1.18.4</version>
     </dependency>
 
     <dependency>
@@ -49,7 +43,11 @@
       <artifactId>gson</artifactId>
       <version>2.8.5</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.jsoup</groupId>
       <artifactId>jsoup</artifactId>
@@ -94,5 +92,17 @@
           </plugin>
       </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <url>http://maven.juefeng.com:8086/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <url>http://maven.juefeng.com:8086/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 
 </project>
