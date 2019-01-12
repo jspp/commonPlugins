@@ -7,5 +7,7 @@ import com.jf.common.taglib.Paging;
  * 2019/1/12
  * 13:13
  */
+@JfServicer
 public interface TestService<T>  extends ParentInterface {
+
 }
