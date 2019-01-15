@@ -24,6 +24,9 @@ public class AppTest {
     @Resource
     private BeanFactory beanFactory;
 
+    /**
+     * 测试 自动代理类是否可以访问
+     */
     @Test
     public void show() {
         testService.sayhello("123");
