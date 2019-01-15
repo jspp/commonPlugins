@@ -49,10 +49,11 @@ public class JfServiceRegister  implements ApplicationContextAware, BeanDefiniti
         scanner.addIncludeFilter(new AnnotationTypeFilter(JfServicer.class,true,true));
         // 获取扫码结果
         Set<BeanDefinition> targets = scanner.findCandidateComponents(scanPath);
-        System.out.println(" 扫码发现目标："+targets.size());
+        System.out.println(" 扫码发现目标个数 ："+targets.size());
         // 注入
         if(targets!=null){
             for (BeanDefinition target:targets){
+
                 BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(target.getBeanClassName());
                 GenericBeanDefinition definition = (GenericBeanDefinition) builder.getRawBeanDefinition();
                 definition.getPropertyValues().add("interfaceClass", target.getBeanClassName());
