@@ -19,11 +19,28 @@ public class ElasticTest {
     @Resource
     private ElasticCurd elasticCurd;
 
-    /**
-     * 测试 自动代理类是否可以访问
-     */
     @Test
-    public void show() {
+    public void testSave() {
         elasticCurd.save();
+    }
+    @Test
+    public void testShowAll() {
+        elasticCurd.ShowAll();
+    }
+    @Test
+    public void testFindByGameId() {
+        elasticCurd.findByGameId();
+    }
+    @Test
+    public void testUpdateGameInfo() {
+        elasticCurd.updateGameInfo();
+    }
+    @Test
+    public void testDeleteById() {
+        elasticCurd.deleteById();
+    }
+    @Test
+    public void testFindGameBeanByGameNameContaining() {
+        elasticCurd.findGameBeanByGameNameContaining();
     }
 }

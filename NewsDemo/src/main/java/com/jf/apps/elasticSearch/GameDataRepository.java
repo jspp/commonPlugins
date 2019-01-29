@@ -15,4 +15,12 @@ public interface GameDataRepository extends ElasticsearchRepository<GameBean,Int
 
     List<GameBean> findByIdGreaterThan(Integer id);
 
+    void deleteById(Integer id);
+
+    GameBean findGameBeanByGameNameContaining(String nameStr);
+
+
+
+
+
 }
