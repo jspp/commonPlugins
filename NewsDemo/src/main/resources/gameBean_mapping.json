@@ -1,0 +1,33 @@
+{
+  "properties": {
+      "addTime": {
+         "type": "long"
+      },
+      "gameDesc": {
+          "type": "text",
+          "analyzer": "ik_max_word",
+          "search_analyzer": "ik_max_word",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+      },
+      "gameName": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+      },
+      "gameSize": {
+         "type": "float"
+      },
+      "id": {
+         "type": "long"
+      }
+  }
+}

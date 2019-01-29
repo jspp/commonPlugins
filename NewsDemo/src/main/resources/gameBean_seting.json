@@ -1,0 +1,11 @@
+{
+  "index" : {
+    "analysis" : {
+      "analyzer" : {
+        "synonym" : {
+          "tokenizer" : "ik_smart"
+        }
+      }
+    }
+  }
+}

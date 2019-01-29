@@ -3,11 +3,9 @@ package com.jf.apps.elasticSearch;
 import lombok.Data;
 import org.apache.commons.lang.time.DateFormatUtils;
 import org.apache.commons.lang.time.DateUtils;
+import org.elasticsearch.index.analysis.IndexAnalyzers;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.DateFormat;
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
+import org.springframework.data.elasticsearch.annotations.*;
 
 import java.util.Date;
 
@@ -16,7 +14,9 @@ import java.util.Date;
  * 2019/1/23
  * 11:13
  */
-@Document(indexName = "game_database", type = "games")
+@Document(indexName = "game_database_ik06", type = "games")
+@Mapping(mappingPath="gameBean_mapping.json")
+@Setting(settingPath = "gameBean_seting.json")
 @Data
 public class GameBean {
 
