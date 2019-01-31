@@ -44,7 +44,7 @@ public class ElasticTest {
         elasticCurd.findGameBeanByGameNameContaining();
     }
     @Test
-    public void testfindGameBeanByGameNameContaining02() {
-        elasticCurd.findGameBeanByGameNameContaining02();
+    public void testAnalyzer() {
+        elasticCurd.analyzer();
     }
 }

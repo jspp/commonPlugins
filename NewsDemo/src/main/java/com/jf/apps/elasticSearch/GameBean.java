@@ -14,22 +14,20 @@ import java.util.Date;
  * 2019/1/23
  * 11:13
  */
-@Document(indexName = "game_database_ik06", type = "games")
-@Mapping(mappingPath="gameBean_mapping.json")
-@Setting(settingPath = "gameBean_seting.json")
+@Document(indexName = "game_database_ik08", type = "games")
 @Data
 public class GameBean {
 
   @Id
   private Integer id;
 
-  @Field
+  @Field(type = FieldType.Text, analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
   private String gameName;
 
   @Field(type = FieldType.Date ,format = DateFormat.date_time_no_millis )
   private Date addTime;
 
-  @Field
+  @Field(type = FieldType.Text, analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
   private String gameDesc;
 
   @Field

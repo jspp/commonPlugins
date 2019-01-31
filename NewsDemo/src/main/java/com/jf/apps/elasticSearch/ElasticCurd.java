@@ -3,6 +3,7 @@ package com.jf.apps.elasticSearch;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.math.RandomUtils;
 import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.QueryStringQueryBuilder;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
@@ -34,7 +35,7 @@ public class ElasticCurd {
     public void save(){
         GameBean gameBean = new GameBean();
         gameBean.setId(RandomUtils.nextInt(100000));
-        gameBean.setGameName("我爱玩天龙八部，这个游戏牛逼很好玩的");
+        gameBean.setGameName("11月30日下午，改革开放40周年之际，西安市对外开放暨民营经济发展大会隆重召开。陕西省委常委、西安市委书记王永康，西安市委常委、常务副市长吕健等市委及市政府主要领导、各界代表、专家学者及企业家等出席了本次盛会，绝峰网络创始人兼CEO刘振宇作为年度创业明星受邀参会。");
         gameBean.setAddTime(new Date());
         gameBean.setGameSize(RandomUtils.nextDouble());
         gameBean.setGameDesc(RandomStringUtils.randomNumeric(5));
@@ -75,19 +76,24 @@ public class ElasticCurd {
 
     /**
      * 模糊查询
+     * 分词查询
+     *  ElasticsearchTemplate
      */
-    public void  findGameBeanByGameNameContaining02(){
-        BoolQueryBuilder builder = QueryBuilders.boolQuery();
-        //builder下有must、should以及mustNot 相当于sql中的and、or以及not
-        //设置模糊搜索,博客的简诉中有学习两个字
-        builder.must(QueryBuilders.fuzzyQuery("sumary", "游戏"));
+    public void  analyzer(){
 
-        SearchQuery searchQuery = new NativeSearchQueryBuilder().withIndices("game_database_ik06")
-                .withTypes("games").withQuery(builder).build();
+        BoolQueryBuilder builder = QueryBuilders.boolQuery()
+                .must(QueryBuilders.matchQuery("gameName", "西安创业"))
+                .must(QueryBuilders.termsQuery("gameDesc","93761"))
+                .must(QueryBuilders.idsQuery("id").addIds("95257"));
 
-        List<GameBean> sellingCarInfos = elasticsearchTemplate.queryForList(searchQuery, GameBean.class);
-        for (GameBean symentry : sellingCarInfos) {
-              System.err.println(symentry);
+        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+                                        .withIndices("game_database_ik08")
+                                        .withTypes("games")
+                                        .withQuery(builder).build();
+
+        List<GameBean> games = elasticsearchTemplate.queryForList(searchQuery, GameBean.class);
+        for (GameBean game : games) {
+              System.err.println(game);
         }
 
     }
