@@ -82,9 +82,18 @@ public class ElasticCurd {
     public void  analyzer(){
 
         BoolQueryBuilder builder = QueryBuilders.boolQuery()
+                /**
+                 * 先分词，后去查询
+                 */
                 .must(QueryBuilders.matchQuery("gameName", "西安创业"))
+                /**
+                 * 按明确的 字符串查询 不分词
+                 */
                 .must(QueryBuilders.termsQuery("gameDesc","93761"))
-                .must(QueryBuilders.idsQuery("id").addIds("95257"));
+                /**
+                 * 按ID查询   Type 哪个表，Id 值
+                 */
+                .must(QueryBuilders.idsQuery("games").addIds("95257"));
 
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
                                         .withIndices("game_database_ik08")
