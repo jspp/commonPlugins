@@ -93,7 +93,11 @@ public class ElasticCurd {
                 /**
                  * 按ID查询   Type 哪个表，Id 值
                  */
-                .must(QueryBuilders.idsQuery("games").addIds("95257"));
+                .must(QueryBuilders.idsQuery("games").addIds("95257"))
+                /**
+                 * 时间范围
+                 */
+                .must(QueryBuilders.rangeQuery("addTime").from("2019-01-30 15:56:19").to("2019-02-30 15:56:19"));
 
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
                                         .withIndices("game_database_ik08")
