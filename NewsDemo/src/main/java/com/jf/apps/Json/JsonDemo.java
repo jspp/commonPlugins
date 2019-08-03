@@ -52,6 +52,16 @@ public class JsonDemo {
                        });
 		System.out.println("git");
 
+        System.out.println(99 % 3);
+        System.out.println(98 % 3);
+        System.out.println(97 % 3);
+        System.out.println(99 % 2);
+        System.out.println(98 % 2);
+        System.out.println(97 % 2);
+        System.out.println(99 % 1);
+        System.out.println(98 % 1);
+        System.out.println(97 % 1);
+
     }
 
 }
