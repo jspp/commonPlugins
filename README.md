@@ -1,4 +1,4 @@
-# NewInJava8
+# Demos
 
 #### 介绍
 Java8 的一些新特性介绍和示例。
@@ -20,6 +20,8 @@ Java8 的一些新特性介绍和示例。
 - lambok : 简化插件
 - jsoup : HTML解析 常用于爬虫或者数据抓取
 - WebFlux SpringBoot Rest
+- mongoDB  CURD
+- SpringJDBC ORM  CURD
 
 
 说明：
