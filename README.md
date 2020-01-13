@@ -1,4 +1,4 @@
-# Demos
+# Deatail
 
 #### 介绍
 Java8 的一些新特性介绍和示例。
