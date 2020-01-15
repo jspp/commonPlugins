@@ -38,14 +38,13 @@ public class TestMongoAggregation {
 
 
     @Test
-    public void testTypedAggregation(){
+    public void testAggregation(){
         AggregationOperation  andAg = Aggregation.match(Criteria.where("_id").gte(345455));
         // 多条件
         AggregationOperation  groupBy = Aggregation.group("appId");
         Aggregation aggregation = Aggregation.newAggregation(andAg,groupBy);
         AggregationResults<CDayAgentgame> rss = mongoTemplate.aggregate(aggregation, "day_agentgame",CDayAgentgame.class);
-        logger.info(" ★★★★★★★★★★★★★★★★ testTypedAggregation = "+ new Gson().toJson(rss) );
-
+        logger.info(" ★★★★★★★★★★★★★★★★ testAggregation = "+ new Gson().toJson(rss) );
     }
 
 }
