@@ -5,19 +5,17 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
+import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 灯xml配置相关对象
- * @User: jspp@qq.com
- * @Date: 2020/1/16 15:18
- */
-@XStreamAlias("switchList")
-public class switchList {
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 
-    /**
-     * ip地址
-     */
+
+public class ItemConfig {
+
     @XStreamAsAttribute()
     public String ip;
 
@@ -38,6 +36,7 @@ public class switchList {
      */
     @XStreamImplicit(itemFieldName = "sno")
     public List<SnoConfig> sno;
+
 
     public String getIp() {
         return ip;

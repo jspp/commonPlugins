@@ -20,22 +20,22 @@ public class CabinetGridConfig {
      */
     @XStreamAsAttribute()
     public String desc;
+
     /**
      * 灯
      */
-    @XStreamAsAttribute()
-    public lamp lamp;
+    @XStreamAlias("lamp")
+    public ItemConfig lamp;
     /**
      * rfid天线
      */
-    @XStreamAsAttribute()
-    public rfid rfid;
+    @XStreamAlias("rfid")
+    public ItemConfig rfid;
     /**
      * 开关列表
      */
-    @XStreamAsAttribute()
-    public switchList switchList;
-
+    @XStreamAlias("switchList")
+    public ItemConfig switchList;
 
     public String getGridType() {
         return gridType;
@@ -61,27 +61,27 @@ public class CabinetGridConfig {
         this.desc = desc;
     }
 
-    public com.jf.apps.xstream.lamp getLamp() {
+    public ItemConfig getLamp() {
         return lamp;
     }
 
-    public void setLamp(com.jf.apps.xstream.lamp lamp) {
+    public void setLamp(ItemConfig lamp) {
         this.lamp = lamp;
     }
 
-    public com.jf.apps.xstream.rfid getRfid() {
+    public ItemConfig getRfid() {
         return rfid;
     }
 
-    public void setRfid(com.jf.apps.xstream.rfid rfid) {
+    public void setRfid(ItemConfig rfid) {
         this.rfid = rfid;
     }
 
-    public com.jf.apps.xstream.switchList getSwitchList() {
+    public ItemConfig getSwitchList() {
         return switchList;
     }
 
-    public void setSwitchList(com.jf.apps.xstream.switchList switchList) {
+    public void setSwitchList(ItemConfig switchList) {
         this.switchList = switchList;
     }
 }
