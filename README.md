@@ -11,9 +11,6 @@ Java8 的一些新特性介绍和示例。
 - 方法引用
 - Optional
 - Stream 流
-
-其他:
-
 - ForkJoin 
 - json-lib : Json 解析 序列化 反序列化
 - gson : Json 解析 序列化 反序列化
@@ -22,6 +19,7 @@ Java8 的一些新特性介绍和示例。
 - WebFlux SpringBoot Rest
 - mongoDB  CURD
 - SpringJDBC ORM  CURD
+- Xstream 解析复杂XML to Bean
 
 
 说明：
