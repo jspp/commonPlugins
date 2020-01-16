@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Root>
+    <Cabinet code="10000" desc="柜子">
+        <CabinetGrid desc="柜格" gridId="10001" gridType="10">
+            <lamp desc="灯" ip="192.168.1.150" port="6000">
+                <sno>1</sno>
+            </lamp>
+            <rfid desc="天线" ip="192.168.1.200" port="4001">
+                <sno>1</sno>
+            </rfid>
+            <switchList desc="红外开关" ip="192.168.1.151" port="6000">
+                <sno>1</sno>
+                <sno>2</sno>
+            </switchList>
+        </CabinetGrid>
+		 <CabinetGrid desc="柜格" gridId="10001" gridType="10">
+            <lamp desc="灯" ip="192.168.1.150" port="6000">
+                <sno>1</sno>
+            </lamp>
+            <rfid desc="天线" ip="192.168.1.200" port="4001">
+                <sno>1</sno>
+            </rfid>
+            <switchList desc="红外开关" ip="192.168.1.151" port="6000">
+                <sno>1</sno>
+                <sno>2</sno>
+            </switchList>
+        </CabinetGrid>
+    </Cabinet>
+	 <Cabinet code="10000" desc="柜子">
+        <CabinetGrid desc="柜格" gridId="10001" gridType="10">
+            <lamp desc="灯" ip="192.168.1.150" port="6000">
+                <sno>1</sno>
+            </lamp>
+            <rfid desc="天线" ip="192.168.1.200" port="4001">
+                <sno>1</sno>
+            </rfid>
+            <switchList desc="红外开关" ip="192.168.1.151" port="6000">
+                <sno>1</sno>
+            </switchList>
+        </CabinetGrid>  
+    </Cabinet>
+</Root>
