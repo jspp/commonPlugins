@@ -35,8 +35,7 @@ public class ItemConfig {
      * 序列号
      */
     @XStreamImplicit(itemFieldName = "sno")
-    public List<SnoConfig> sno;
-
+    public List<String> sno;
 
     public String getIp() {
         return ip;
@@ -62,11 +61,11 @@ public class ItemConfig {
         this.desc = desc;
     }
 
-    public List<SnoConfig> getSno() {
+    public List<String> getSno() {
         return sno;
     }
 
-    public void setSno(List<SnoConfig> sno) {
+    public void setSno(List<String> sno) {
         this.sno = sno;
     }
 }
