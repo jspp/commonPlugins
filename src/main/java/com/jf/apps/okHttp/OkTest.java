@@ -22,7 +22,7 @@ public class OkTest {
             System.out.println(response.body().string()) ;
         }
         */
-        // post
+        // httppost
         String url = "http://www.pipiwan.com";
         RequestBody formBody = new FormBody.Builder()
                 .add("platform", "android")

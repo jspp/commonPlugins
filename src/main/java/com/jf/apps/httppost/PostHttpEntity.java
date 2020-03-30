@@ -1,18 +1,18 @@
-package com.jf.apps.post;
+package com.jf.apps.httppost;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 测试通过
  * ouyangjie
  * 2020/3/26
  * 17:54
  */
-public class PostObjectByEntity {
+public class PostHttpEntity {
 
     public static void main(String[] args) {
 
@@ -24,10 +24,11 @@ public class PostObjectByEntity {
         paramMap.add("certification","1");
 
         HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type","application/json");
         HttpEntity<MultiValueMap<String, Object>> httpEntity = new HttpEntity<MultiValueMap<String, Object>>(paramMap,headers);
+        ResponseEntity<String> rsStr = new RestTemplate().postForEntity("http://localhost:8888/str", httpEntity, String.class);
+        System.out.println(rsStr.getBody());
 
-        String rsStr = new RestTemplate().postForObject("http://sdkapi.277sy.com/index.php/User/check", httpEntity, String.class);
-        System.out.println(rsStr);
 
     }
 }
