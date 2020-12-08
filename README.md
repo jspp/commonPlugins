@@ -20,7 +20,7 @@
 - mongoDB  CURD
 - SpringJDBC ORM  CURD
 - Xstream 解析复杂XML to Bean
-
+- thumbnailator 图片处理组件
 
 说明：
 
